@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 18:03:26 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/06 18:03:36 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/07 12:01:00 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_itoa(int nbr)
 	unbr = nbr;
 	len = ft_nbrlen(nbr, len, unbr);
 	if (!(nbr_final = (char *)malloc(sizeof(char) * (len + 1))))
-		return (0);
+		return (NULL);
 	if (nbr < 0)
 	{
 		nbr_final[0] = '-';

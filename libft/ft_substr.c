@@ -6,11 +6,11 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:53:53 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/06 17:44:17 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/07 13:10:04 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lift.h"
+#include "libft.h"
 
 char    *ft_substr(char const *s, unsigned int start, size_t len)
 {

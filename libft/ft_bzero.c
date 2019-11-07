@@ -6,20 +6,22 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 15:06:59 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/04 15:35:47 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/07 16:39:22 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
+#include "libft.h"
 
 void    *ft_bzero(void *s, size_t n)
 {
-    int i;
-    i= 0;
+    size_t i;
+	char *str;
 
+    i = 0;
+	str = (char *)s;
     while (i <= n)
     {
-        (char *)s[i] = '\0';
+        str[i] = '\0';
         i++;
     }
 }

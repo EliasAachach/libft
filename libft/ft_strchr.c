@@ -6,13 +6,13 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 16:34:06 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/06 16:16:46 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/07 13:28:11 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *strchr(constr char *s, int c)
+char    *ft_strchr(const char *s, int c)
 {
     int i;
     int j;
