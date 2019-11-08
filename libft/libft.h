@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 12:59:18 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/07 16:26:53 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/08 15:52:30 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char            *ft_substr(char const *s, unsigned int start, size_t len);
 char            *ft_strtrim(char *s);
 char            *ft_strnstr(const char *haystack,const char *needle, size_t len);
 int             ft_strncmp(const char *s1, const char *s2,size_t n);
-unsigned int    ft_strlen(const char *str);
+size_t          ft_strlen(const char *str);
 char            *ft_strcat(char *dest, char *src);
 char            *ft_strdup(const char *s1);
 char            *ft_strchr(const char *s, int c);
@@ -40,6 +40,6 @@ int             ft_isascii(int c);
 int             ft_isalnum(int c);
 int             ft_isalpha(int c);
 void            *ft_calloc(size_t count, size_t size);
-void            *ft_bzero(void *s, size_t n);
+void            ft_bzero(void *s, size_t n);
 
 #endif

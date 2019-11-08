@@ -6,13 +6,13 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 15:21:06 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/05 15:25:59 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/08 15:52:31 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_strlen(const char *s)
+size_t     ft_strlen(const char *s)
 {
     int i;
     i = 0;
