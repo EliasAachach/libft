@@ -6,21 +6,11 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 16:51:47 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/05 18:12:34 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/11 18:08:30 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-unsigned int	ft_strlen(char *str)
-{
-	unsigned int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 unsigned int	ft_strlcpy(char *dest, const char *src, size_t size)
 {

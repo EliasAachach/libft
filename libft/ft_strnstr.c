@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:35:27 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/05 19:08:54 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/11 18:10:23 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			k++;
 			j++;
-			if (to_find[j] == '\0')
+			if (needle[j] == '\0')
 				return (str + k - j);
 		}
 		k = 0;
