@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 17:35:27 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/11 18:10:23 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/12 13:38:52 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
     j = 0;
     k = 0;
     if(!(needle))
-        return (haystack);
+        return ((char *)haystack);
     while(i <= len)
     {
         k = i;
@@ -31,10 +31,11 @@ char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
 			k++;
 			j++;
 			if (needle[j] == '\0')
-				return (str + k - j);
+				return ((char *)needle + k - j);
 		}
 		k = 0;
 		j = 0;
 		i++;
     }
+    return (NULL);
 }

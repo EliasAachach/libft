@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:12:47 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/06 17:58:52 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/12 14:41:54 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,16 @@ char    *ft_strtrim(char *s)
     len = 0;
     while(s[i])
     {
-        if(ft_isallpha(s[i]) = 1)
+        if(ft_isalpha(s[i]) == 1)
             len++;
         i++;
     }
     i = 0;
-    if(!(s2 = (char *)malloc(sizeof(char) * len + 1))
+    if(!(s2 = (char *)malloc(sizeof(char) * len + 1)))
         return (0);
     while(s[i])
     {
-        if(ft_isalpha(s[i]) = 1)
+        if(ft_isalpha(s[i]) == 1)
         {
             s2[i] = s[i];
         }

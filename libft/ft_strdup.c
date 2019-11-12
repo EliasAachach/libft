@@ -6,11 +6,11 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 16:16:51 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/06 16:28:04 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/12 11:59:52 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linft.h"
+#include "libft.h"
 
 char    *ft_strdup(const char *s1)
 {
@@ -20,7 +20,7 @@ char    *ft_strdup(const char *s1)
 
     i = 0;
     len = ft_strlen(s1);
-    if (!(s2 = ((char *)malloc)sizeof(char) * len + 1))
+    if (!(s2 = ((char *)malloc(sizeof(char) * len + 1))))
         return (0);
     while (i <= len)
     {

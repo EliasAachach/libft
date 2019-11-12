@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 12:59:18 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/08 19:56:47 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/12 16:09:50 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ char            *ft_strtrim(char *s);
 char            *ft_strnstr(const char *haystack,const char *needle, size_t len);
 int             ft_strncmp(const char *s1, const char *s2,size_t n);
 size_t          ft_strlen(const char *str);
-char            *ft_strcat(char *dest, char *src);
+char            *ft_strcat(char *dest, const char *src);
 char            *ft_strdup(const char *s1);
 char            *ft_strchr(const char *s, int c);
-int             **ft_split(char *str, char *charset);
+char            **ft_split(char *str, char *charset);
 void            *ft_memset(void *b, int c, size_t len);
 void            *ft_memcpy(void *dest, const void *src, size_t n);
 char            *ft_itoa(int nbr);
