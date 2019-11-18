@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 12:59:18 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/18 18:15:03 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/18 18:27:48 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,17 @@
 # include <stdlib.h>
 # include <ctype.h>
 
+void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void			*ft_memmove(void *dst, const void *src, size_t len);
+void			*ft_memchr(const void *s, int c, size_t n);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
+size_t			ft_strlcat(char *dest, const char *src, size_t size);
+size_t			ft_strlcpy(char *dest, const char *src, size_t size);
+char			*ft_strrchr(const char *s, int c);
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(char *s);
+char			**ft_split(char *str, char *charset);
 int             ft_atoi(const char *str);
 char            ft_toupper(int c);
 char            ft_tolower(int c);
