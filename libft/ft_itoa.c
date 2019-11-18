@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 18:03:26 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/07 12:01:00 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/18 14:28:07 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_itoa(int nbr)
 {
 	unsigned int	unbr;
 	int				len;
-	char 			*nbr_final;
+	char			*nbr_final;
 
 	len = 0;
 	unbr = nbr;

@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 12:59:18 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/12 16:09:50 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/18 18:15:03 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,9 @@ int             ft_isalnum(int c);
 int             ft_isalpha(int c);
 void            *ft_calloc(size_t count, size_t size);
 void            ft_bzero(void *s, size_t n);
+void			ft_putchar_fd(char c, int fd);
+void			ft_putnbr_fd(int n, int fd);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putstr_fd(char *s, int fd);
 
 #endif

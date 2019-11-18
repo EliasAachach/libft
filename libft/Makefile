@@ -6,11 +6,13 @@
 #    By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/07 11:52:20 by elaachac          #+#    #+#              #
-#    Updated: 2019/11/15 15:35:20 by elaachac         ###   ########.fr        #
+#    Updated: 2019/11/18 17:02:44 by elaachac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+FLAGS = -Wall -Werror -Wextra
 
 SRCS =	./ft_memset.c\
 		./ft_bzero.c\
@@ -45,14 +47,6 @@ SRCS =	./ft_memset.c\
 		./ft_putstr_fd.c\
 		./ft_putendl_fd.c\
 		./ft_putnbr_fd.c\
-		./ft_lstadd_back.c\
-		./ft_lstadd_front.c\
-		./ft_lstclear.c\
-		./ft_lstdelone.c\
-		./ft_lstiter.c\
-		./ft_lstlast.c\
-		./ft_lstnew.c\
-		./ft_lstsize.c\
 		./ft_memcmp.c\
 
 CC = gcc

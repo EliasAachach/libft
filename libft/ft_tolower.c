@@ -6,18 +6,18 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 16:29:25 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/05 16:32:41 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/18 15:48:36 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    ft_tolower(int c)
+char	ft_tolower(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-    {
-        c -= 32;
-        return (c);
-    }
-    return (c);
+	if (c >= 'A' && c <= 'Z')
+	{
+		c -= 32;
+		return (c);
+	}
+	return (c);
 }

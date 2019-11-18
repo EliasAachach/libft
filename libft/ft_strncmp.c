@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 16:47:59 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/05 18:11:10 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/18 15:35:03 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned	int i;
+	unsigned	int		i;
 
 	i = 0;
 	if (n == 0)
