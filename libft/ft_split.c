@@ -6,25 +6,25 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:59:05 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/18 15:16:37 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/19 11:39:07 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		in_charset(char c, char *charset)
+int		in_charset(char c, char charset)
 {
-	if (*charset == '\0' || charset == NULL)
+	if (charset == '\0' || charset == NULL)
 		return (0);
-	while (*charset)
+	while (charset)
 	{
-		if (*charset++ == c)
+		if (charset++ == c)
 			return (1);
 	}
 	return (0);
 }
 
-char	*copy_word(char *str, char *charset)
+char	*copy_word(char *str, char charset)
 {
 	int		size;
 	char	*tab_line;
@@ -46,7 +46,7 @@ char	*copy_word(char *str, char *charset)
 	return (tab_line);
 }
 
-char	**set_table(char *str, char *charset, char **tab)
+char	**set_table(char *str, char charset, char **tab)
 {
 	int	index;
 	int	ret_i;
@@ -72,7 +72,7 @@ char	**set_table(char *str, char *charset, char **tab)
 	return (tab);
 }
 
-char	**ft_split(char *str, char *charset)
+char	**ft_split(const char *str, char charset)
 {
 	int		size;
 	int		check;
