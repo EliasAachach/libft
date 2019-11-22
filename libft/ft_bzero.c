@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 15:38:43 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/18 16:04:07 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/22 14:18:11 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_bzero(void *s, size_t n)
 	str = (char *)s;
 	if (n == 0)
 		return ;
-	while (i <= n)
+	while (i < n)
 	{
 		str[i] = '\0';
 		i++;

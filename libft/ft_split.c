@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:59:05 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/19 11:39:07 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/22 14:04:52 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		in_charset(char c, char charset)
 {
-	if (charset == '\0' || charset == NULL)
+	if (charset == '\0')
 		return (0);
 	while (charset)
 	{
@@ -81,7 +81,7 @@ char	**ft_split(const char *str, char charset)
 
 	check = 0;
 	size = 0;
-	last_str = str;
+	last_str = (char *)str;
 	while (*str)
 	{
 		if (!in_charset(*str, charset) && check == 0)
