@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 16:34:06 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/18 15:19:32 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/25 13:30:09 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
 	char	*str;
 
 	str = (char *)s;
-	i = 0;
-	while (str[i])
+	while (*str)
 	{
-		if (str[i] == c)
-			return (str + i);
-		i++;
+		if (*str == (char)c)
+			return (str);
+		str++;
 	}
-	return (NULL);
+	if (c == '\0')
+		return (str);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 17:02:06 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/22 18:04:32 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/25 12:38:17 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,18 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (NULL);
 	s1 = (unsigned char *)dst;
 	s2 = (unsigned char *)src;
-	i = -1;
+	i = 0;
 	j = 0;
-	if (dst < src)
+	if (s2 < s1)
+		while (++i <= len)
+			s1[len - i] = s2[len - i];
+	else
 	{
-		i = len;
-		while (i > 0)
+		while (i < len)
 		{
-			s1[i] = s2[j];
-			i--;
-			j++;
+			s1[i] = s2[i];
+			i++;
 		}
-		return (dst);
 	}
-	while (++i < len)
-		s1[i] = s2[i];
 	return (dst);
 }
