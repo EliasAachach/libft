@@ -30,8 +30,8 @@ char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(const char *s1, const char *set);
 int				ft_atoi(const char *str);
-char			ft_toupper(int c);
-char			ft_tolower(int c);
+int				ft_toupper(int c);
+int				ft_tolower(int c);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strnstr(const char *haystack, const char *needle,
 				size_t len);
