@@ -61,7 +61,10 @@ size_t	cut_words(const char *str, size_t words, char **r, char c)
 		while (str[end] && str[end] != c)
 			end++;
 		if (!(r[w] = malloc(end - start + 1)))
+		{
+			free(r[w]);
 			return (0);
+		}
 		cpy(r[w], (char *)str + start, end - start);
 		start = end + 1;
 		w++;
@@ -80,12 +83,18 @@ char			**ft_split(char const *str, char c)
 	if (!words)
 	{
 		if (!(r = malloc(sizeof(*r))))
+		{
+			free(r);
 			return (NULL);
+		}
 		r[0] = NULL;
 		return (r);
 	}
 	if (!(r = malloc((words + 1) * sizeof(*r))))
+	{
+		free(r);
 		return (NULL);
+		}
 	if (!cut_words(str, words, r, c))
 		return (NULL);
 	r[words] = 0;
