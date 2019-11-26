@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 16:10:54 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/25 16:45:38 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/26 17:53:49 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	i = 0;
-	len = ft_strlen(s);
-	if (s == NULL || f == NULL)
+	if (f == NULL || s == NULL)
 		return (NULL);
+	len = ft_strlen(s);
 	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	while (i < len)

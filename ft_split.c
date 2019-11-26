@@ -6,13 +6,13 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 17:59:05 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/22 14:04:52 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/26 17:18:48 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		cpy(char *dest, char *src, size_t n)
+void	cpy(char *dest, char *src, size_t n)
 {
 	size_t		i;
 
@@ -72,7 +72,7 @@ size_t	cut_words(const char *str, size_t words, char **r, char c)
 	return (1);
 }
 
-char			**ft_split(char const *str, char c)
+char	**ft_split(char const *str, char c)
 {
 	size_t		words;
 	char		**r;
@@ -94,7 +94,7 @@ char			**ft_split(char const *str, char c)
 	{
 		free(r);
 		return (NULL);
-		}
+	}
 	if (!cut_words(str, words, r, c))
 		return (NULL);
 	r[words] = 0;

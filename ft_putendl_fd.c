@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 16:15:22 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/18 14:52:57 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/26 17:17:19 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	int i;
-
 
 	i = 0;
 	if (s)
