@@ -14,21 +14,10 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	*tab;
-	size_t	i;
+	void	*tab;
 
-	i = 0;
-	if (count == 0 || size == 0)
+	if (!(tab = malloc(size * count)))
 		return (NULL);
-	if (!(tab = ((size_t *)malloc(sizeof(size) * (count + 1)))))
-	{
-		tab[0] = '\0';
-		return (tab);
-	}
-	while (i <= count)
-	{
-		tab[i] = 0;
-		i++;
-	}
-	return ((void *)tab);
+	ft_bzero(tab, size * count);
+	return (tab);
 }
