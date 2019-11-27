@@ -6,7 +6,7 @@
 /*   By: elaachac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 18:17:34 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/22 14:01:12 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/27 16:08:47 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,25 +38,18 @@ size_t	lenght(const char *s1, const char *set, unsigned int start)
 
 char	*ft_strtrim(const char *s1, const char *set)
 {
-	unsigned int	start;
-	size_t			dst_len;
-	unsigned int	i;
-	unsigned int	j;
+	size_t	start;
+	size_t	len;
 
-	i = 0;
-	j = 0;
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	start = 0;
-	dst_len = 0;
-	while (set[i])
-	{
-		while (s1[j] == set[j])
-		{
-			i = 0;
-			start++;
-			j++;
-		}
-		i++;
-	}
-	dst_len = lenght(s1, set, start);
-	return (ft_substr(s1, start, dst_len));
+	len = 0;
+	while (s1[start] && ft_strchr(set, s1[start]) != NULL)
+		start++;
+	len = ft_strlen(&s1[start]);
+	if (len != 0)
+		while (s1[start + len - 1] && ft_strchr(set, s1[start + len -1]) != NULL)
+			len--;
+		return (ft_substr(s1, start, len));
 }

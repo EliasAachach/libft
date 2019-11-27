@@ -6,7 +6,7 @@
 /*   By: elaachac <elaachac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 16:34:06 by elaachac          #+#    #+#             */
-/*   Updated: 2019/11/25 13:30:09 by elaachac         ###   ########.fr       */
+/*   Updated: 2019/11/27 16:02:43 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (c == '\0')
 		return (str);
-	return (0);
+	return (NULL);
 }
