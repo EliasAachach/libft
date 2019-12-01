@@ -9,94 +9,79 @@
 /*   Updated: 2019/11/29 17:50:30 by elaachac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-static void		cpy(char *dest, char *src, size_t n)
+static void		*ft_strfree(char **str)
 {
-	size_t		i;
+	int	i;
 
 	i = 0;
-	while (i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-}
-
-static	size_t	count_words(const char *str, char c)
-{
-	size_t		i;
-	size_t		words;
-
-	i = 0;
-	words = 0;
 	while (str[i])
+		i++;
+	while (i > 0)
 	{
-		while (str[i] == c)
-			i++;
-		if (!str[i])
-			break ;
-		words++;
-		while (str[i] && str[i] != c)
-			i++;
+		i--;
+		free(str[i]);
 	}
-	return (words);
+	free(str);
+	return ((void *)0);
 }
 
-static	size_t	cut_words(const char *str, size_t words, char **r, char c)
+static int		ft_nbwrds(char const *s, char c)
 {
-	size_t		w;
-	size_t		start;
-	size_t		end;
+	int	i;
+	int	j;
 
-	w = 0;
-	start = 0;
-	while (w < words && str[start])
+	if (!s)
+		return (-1);
+	i = 0;
+	j = 0;
+	while (s[i])
 	{
-		while (str[start] == c)
-			start++;
-		end = start;
-		while (str[end] && str[end] != c)
-			end++;
-		if (!(r[w] = malloc(end - start + 1)))
+		if (s[i] != c)
 		{
-			free(r[w]);
-			return (0);
+			j++;
+			while (s[i] != c && s[i])
+				i++;
 		}
-		cpy(r[w], (char *)str + start, end - start);
-		start = end + 1;
-		w++;
+		else
+			i++;
 	}
-	return (1);
+	return (j);
 }
 
-char			**ft_split(char const *str, char c)
+static int		w(char const *s, int i, char c)
 {
-	size_t		words;
-	char		**r;
+	while (s[i] != c && s[i])
+		i++;
+	return (i + 1);
+}
 
-	if (!str)
+char			**ft_split(char const *s, char c)
+{
+	char	**out;
+	int		i[3];
+
+	if ((ft_nbwrds(s, c) == -1)
+			|| !(out = (char **)malloc(sizeof(char *) * (ft_nbwrds(s, c) + 1))))
 		return (NULL);
-	words = count_words(str, c);
-	if (!words)
+	i[0] = 0;
+	i[1] = 0;
+	while (s[i[0]])
 	{
-		if (!(r = malloc(sizeof(*r))))
+		if (s[i[0]] != c)
 		{
-			free(r);
-			return (NULL);
+			if (!(out[i[1]] = (char *)malloc(sizeof(char) * w(s, i[0], c))))
+				return (ft_strfree(out));
+			i[2] = 0;
+			while (s[i[0]] != c && s[i[0]])
+				out[i[1]][i[2]++] = s[i[0]++];
+			out[i[1]][i[2]] = '\0';
+			i[1]++;
 		}
-		r[0] = NULL;
-		return (r);
+		else
+			i[0]++;
 	}
-	if (!(r = malloc((words + 1) * sizeof(*r))))
-	{
-		free(r);
-		return (NULL);
-	}
-	if (!cut_words(str, words, r, c))
-		return (NULL);
-	r[words] = 0;
-	return (r);
+	out[i[1]] = NULL;
+	return (out);
 }
